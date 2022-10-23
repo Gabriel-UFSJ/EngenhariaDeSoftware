@@ -8,7 +8,6 @@ import Persist.ProductPersist;
 public class Controller {
 
 	public void Register() {
-
 	}
 	
 	public Entity SearchID(Integer ID) {
@@ -18,11 +17,7 @@ public class Controller {
 	public Entity SearchString(String S) {
 		return null;
 	}
-	
-	public void Modify(Entity entity) {
-		
-	}
-	
+
 	public static void ExitProgram() {
 		
 		OrderPersist order = OrderPersist.getUniqueInstance();
