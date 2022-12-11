@@ -24,13 +24,13 @@ public class MainMenu extends Menu{
             switch (option) {
                 case 1:
                     ProductFactory menuProduct = new ProductFactory();
-                    Menu Menu = (View.Menu) menuProduct.cria("OrderMenu");
-                    Menu.ShowMenu();
+                    Menu menu = (Menu) menuProduct.cria("ProductMenu");
+                    menu.ShowMenu();
                     break;
                 case 2:
                     OrderFactory menuOrder = new OrderFactory();
-                    Menu Menu2 = (Menu) menuOrder.cria("OrderMenu");
-                    Menu2.ShowMenu();
+                    Menu menu2 = (Menu) menuOrder.cria("OrderMenu");
+                    menu2.ShowMenu();
                     break;
                 case 0:
                     Controller.ExitProgram();

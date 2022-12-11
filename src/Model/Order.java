@@ -24,10 +24,11 @@ public class Order extends Entity{
         return content;   		
     }
     
-    public void constructor(String Name, Integer id, String dn) {
-    	this.setName(Name);
+    public void constructor(String name, int id, String document, ArrayList<Product> lista) {
+    	this.setName(name);
     	this.setID(id);
-    	this.setDocumentNumber(dn);
+    	this.setDocumentNumber(document);
+    	this.productList.addAll(lista);
     	this.setTotalPrice(totalPrice());
     }
     

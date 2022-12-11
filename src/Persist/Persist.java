@@ -16,7 +16,7 @@ public abstract class Persist {
 	public static void PersistSave(ArrayList<Entity> list ,String path){
 
 		try {
-			FileOutputStream file = new FileOutputStream(new File(path));
+			FileOutputStream file = new FileOutputStream(new File(System.getProperty("user.dir") + path));
 			ObjectOutputStream out = new ObjectOutputStream(file);
 			
 			for(Entity object : list) {
@@ -38,7 +38,7 @@ public abstract class Persist {
 		
 		boolean cont = true;
 		try {
-			ObjectInputStream input = new ObjectInputStream(new FileInputStream(path));
+			ObjectInputStream input = new ObjectInputStream(new FileInputStream(System.getProperty("user.dir") + path));
 			while(cont){
 				Entity obj = null;
 			try {

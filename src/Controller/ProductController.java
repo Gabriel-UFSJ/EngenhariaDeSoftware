@@ -2,34 +2,13 @@ package Controller;
 
 import java.util.ArrayList;
 
-import Factory.ProductFactory;
 import Model.Entity;
-import Model.Product;
 import Persist.ProductPersist;
 
 public class ProductController extends Controller{
 	
-	@Override
 	public void Register() {
-		ProductFactory modelProduct = new ProductFactory();
-		Product model = (Model.Product) modelProduct.cria("Product");
 		
-		System.out.println("Product Register");
-		
-		System.out.println("Insert Name: ");
-		String Name = Console.readLine();
-		System.out.println("Insert ID: ");
-		Integer ID = Integer.parseInt(Console.readLine());
-		System.out.println("Insert Price of production: ");
-		Float PriceProduction = Float.parseFloat(Console.readLine());
-		System.out.println("Insert Sell Price: ");
-		Float Pricesell = Float.parseFloat(Console.readLine());
-		System.out.println("Insert Quantity in stock");
-		Integer qtd = Integer.parseInt(Console.readLine());
-		
-		model.constructor(Name, ID, PriceProduction, Pricesell, qtd);
-		
-		System.out.println("Product Registred");
 	}
 	
 	@Override
